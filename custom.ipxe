@@ -12,7 +12,6 @@ item option_one ${space} Loading an ISO
 choose custom_choice || goto custom_exit
 echo ${cls}
 goto ${custom_choice}
-goto custom_exit
 
 :option_one
 kernel http://pxe.stvital.io/memdisk raw iso

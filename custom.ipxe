@@ -9,6 +9,7 @@ clear custom_choice
 menu StV
 item --gap Load ISO
 item option_one ${space} Loading an ISO
+sleep 10
 choose custom_choice || goto custom_exit
 echo ${cls}
 goto ${custom_choice}

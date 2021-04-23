@@ -1,21 +1,21 @@
 
 #!ipxe
 ###
-### {{ site_name }} StVital.io
+### StVital.io
 ###
 
 :custom
 clear custom_choice
 menu StV
 item --gap Load ISO
-item option_two ${space} Loading an ISO
+item option_one ${space} Loading an ISO
 choose custom_choice || goto custom_exit
 echo ${cls}
 goto ${custom_choice}
 goto custom_exit
 
-:option_two
-kernel {{ memdisk_location }} raw iso
+:option_one
+kernel http://pxe.stvital.io/memdisk raw iso
 read isopath
 initrd ${isopath}
 boot || goto custom_exit

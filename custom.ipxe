@@ -15,7 +15,7 @@ echo ${cls}
 goto ${custom_choice}
 
 :option_one
-kernel http://pxe.stvital.io/memdisk raw iso
+kernel http://pxe.stvital.io/memdisk
 read isopath
-initrd ${isopath}
+initrd ${isopath} 
 boot

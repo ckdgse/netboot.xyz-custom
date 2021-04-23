@@ -18,8 +18,4 @@ goto custom_exit
 kernel http://pxe.stvital.io/memdisk raw iso
 read isopath
 initrd ${isopath}
-boot || goto custom_exit
-
-:custom_exit
-sleep 10
-exit 0
+boot
